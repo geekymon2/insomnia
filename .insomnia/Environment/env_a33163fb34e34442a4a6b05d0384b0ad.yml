@@ -1,0 +1,24 @@
+_id: env_a33163fb34e34442a4a6b05d0384b0ad
+type: Environment
+parentId: env_aeeefb6ce32318efc07adc8285ed62f8d3e6a6db
+modified: 1715594848581
+created: 1715578884433
+name: CI
+data:
+  base_url: http://minikube:30000/api/car-info-service
+  GLOBAL_HEADERS:
+    Accept: application/json
+    Authorization: Bearer
+      eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnZWVreW1vbjJAZ21haWwuY29tIiwiaWF0IjoxNzE1NTgxMDIwLCJleHAiOjE3MTU1ODI4MjB9.WuhUgIKinNdp7MW28PpFA7lQsjlVMpoKWJTrEw1Sb480BcJDSu1TP9MtFJ-wo9VVgYK3bTv69aQf9jxiuGbSZw
+    Content-Type: application/json
+dataPropertyOrder:
+  "&":
+    - base_url
+    - GLOBAL_HEADERS
+  "&~|GLOBAL_HEADERS":
+    - Accept
+    - Authorization
+    - Content-Type
+color: "#2b00ff"
+isPrivate: false
+metaSortKey: 1715578884433

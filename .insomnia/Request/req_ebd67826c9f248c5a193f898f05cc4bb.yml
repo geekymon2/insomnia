@@ -1,0 +1,21 @@
+_id: req_ebd67826c9f248c5a193f898f05cc4bb
+type: Request
+parentId: wrk_9e453eed6c7d42d080e23e38e1552507
+modified: 1715578884436
+created: 1715578884436
+url: "{{ _.base_url }}/car/makes"
+name: /car/makes
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1715578884436
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

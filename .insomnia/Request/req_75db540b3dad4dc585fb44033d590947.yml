@@ -1,0 +1,27 @@
+_id: req_75db540b3dad4dc585fb44033d590947
+type: Request
+parentId: wrk_9e453eed6c7d42d080e23e38e1552507
+modified: 1715578884434
+created: 1715578884434
+url: "{{ _.base_url }}/car/models"
+name: /car/models
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: arg0
+    disabled: false
+    value: string
+  - name: arg1
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1715578884434
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

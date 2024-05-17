@@ -1,0 +1,21 @@
+_id: req_7acebec436564f4eb7c291a4bfe9ffcc
+type: Request
+parentId: wrk_9e453eed6c7d42d080e23e38e1552507
+modified: 1715578884435
+created: 1715578884435
+url: "{{ _.base_url }}/car/models/count"
+name: /car/models/count
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1715578884435
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,227 @@
+_id: spc_10e6e311f132418b9b7022ee32b04eb5
+type: ApiSpec
+parentId: wrk_9e453eed6c7d42d080e23e38e1552507
+modified: 1715578879896
+created: 1715577831664
+fileName: Car Info Service v0.0.1
+contents: >
+  {
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Car Info Service",
+      "description": "Car Info Service API",
+      "license": { "name": "Apache 2.0", "url": "http://springdoc.org" },
+      "version": "v0.0.1"
+    },
+    "externalDocs": { 
+      "description": "Car Info Service Documentation",
+      "url": "http://minikube:30000/api/car-info-service"
+      },
+    "servers": [
+      {
+        "url": "http://minikube:30000/api/car-info-service",
+        "description": "Generated server url"
+      }
+    ],
+    "paths": {
+      "/car/types": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarModelTypes",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "SEDAN",
+                        "SUV",
+                        "HATCHBACK",
+                        "PERFORMANCE",
+                        "COMMERCIAL",
+                        "UTE"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/car/status": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getStatus",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": { "schema": { "$ref": "#/components/schemas/StatusDto" } }
+              }
+            }
+          }
+        }
+      },
+      "/car/models": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarModelsByMakeAndType",
+          "parameters": [
+            {
+              "name": "arg0",
+              "in": "query",
+              "required": true,
+              "schema": { "type": "string" }
+            },
+            {
+              "name": "arg1",
+              "in": "query",
+              "required": true,
+              "schema": { "type": "string" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "type": "array",
+                    "items": { "$ref": "#/components/schemas/CarModelDto" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/car/models/{id}": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarModelById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": { "type": "integer", "format": "int64" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": { "$ref": "#/components/schemas/CarModelDto" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/car/models/count": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarModelsCount",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": { "schema": { "type": "integer", "format": "int64" } }
+              }
+            }
+          }
+        }
+      },
+      "/car/makes": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarMakes",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "type": "array",
+                    "items": { "$ref": "#/components/schemas/CarMakeDto" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/car/makes/{id}": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarMakeById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": { "type": "integer", "format": "int64" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": { "schema": { "$ref": "#/components/schemas/CarMakeDto" } }
+              }
+            }
+          }
+        }
+      },
+      "/car/makes/count": {
+        "get": {
+          "tags": ["car-info-controller"],
+          "operationId": "getCarMakesCount",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": { "schema": { "type": "integer", "format": "int64" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "StatusDto": {
+          "type": "object",
+          "properties": {
+            "environment": { "type": "string" },
+            "version": { "type": "string" },
+            "hostname": { "type": "string" },
+            "description": { "type": "string" }
+          }
+        },
+        "CarModelDto": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "integer", "format": "int64" },
+            "name": { "type": "string" },
+            "type": { "type": "string" }
+          }
+        },
+        "CarMakeDto": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "integer", "format": "int64" },
+            "name": { "type": "string" },
+            "country": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+contentType: yaml

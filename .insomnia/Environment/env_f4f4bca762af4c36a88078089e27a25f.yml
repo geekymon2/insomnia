@@ -1,0 +1,14 @@
+_id: env_f4f4bca762af4c36a88078089e27a25f
+type: Environment
+parentId: env_aeeefb6ce32318efc07adc8285ed62f8d3e6a6db
+modified: 1715594908066
+created: 1715594826550
+name: LOCAL
+data:
+  base_url: http://localhost:8008/api/car-info-service
+dataPropertyOrder:
+  "&":
+    - base_url
+color: "#c8ff00"
+isPrivate: false
+metaSortKey: 1715594826550
